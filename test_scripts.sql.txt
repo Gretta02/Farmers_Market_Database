@@ -1,0 +1,31 @@
+SET SERVEROUTPUT ON;
+
+-- Test vendor sales
+DECLARE
+    v_sales DECIMAL;
+BEGIN
+    v_sales := farmers_market_pkg.get_vendor_sales(1);
+    DBMS_OUTPUT.PUT_LINE('Total sales for vendor 1: $' || TO_CHAR(v_sales, '999,999.99'));
+END;
+/
+
+-- Test sales report
+BEGIN
+    farmers_market_pkg.generate_sales_report;
+END;
+/
+
+-- Test inventory status
+DECLARE
+    v_status VARCHAR2(50);
+BEGIN
+    v_status := farmers_market_pkg.check_inventory_status(1);
+    DBMS_OUTPUT.PUT_LINE('Inventory status: ' || v_status);
+END;
+/
+
+-- Test vendor performance
+BEGIN
+    farmers_market_pkg.get_vendor_performance(1);
+END;
+/

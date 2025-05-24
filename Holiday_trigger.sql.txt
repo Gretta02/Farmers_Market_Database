@@ -1,0 +1,25 @@
+CREATE OR REPLACE TRIGGER trg_block_holiday_products
+BEFORE INSERT OR UPDATE OR DELETE ON PRODUCTS
+DECLARE
+    v_holiday_count NUMBER := 0;
+    v_test_date DATE := TO_DATE('2024-03-27', 'YYYY-MM-DD');
+    v_day_of_week VARCHAR2(3);
+BEGIN
+    SELECT COUNT(*) INTO v_holiday_count
+    FROM HOLIDAYS WHERE holiday_date = v_test_date;
+    
+    v_day_of_week := TO_CHAR(v_test_date, 'DY', 'NLS_DATE_LANGUAGE=ENGLISH');
+    
+    DBMS_OUTPUT.PUT_LINE('=== DEBUG INFO ===');
+    DBMS_OUTPUT.PUT_LINE('Checking date: ' || TO_CHAR(v_test_date, 'DD-MON-YYYY DY'));
+    DBMS_OUTPUT.PUT_LINE('Holiday count: ' || v_holiday_count);
+    DBMS_OUTPUT.PUT_LINE('Day of week: ' || v_day_of_week);
+    DBMS_OUTPUT.PUT_LINE('================');
+    
+    IF v_holiday_count > 0 THEN
+        RAISE_APPLICATION_ERROR(-20011, 'Operations not allowed on holidays');
+    ELSIF v_day_of_week IN ('SAT', 'SUN') THEN
+        RAISE_APPLICATION_ERROR(-20010, 'Operations not allowed on weekends');
+    END IF;
+END;
+/

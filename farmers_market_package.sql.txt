@@ -1,0 +1,19 @@
+CREATE OR REPLACE PACKAGE farmers_market_pkg AS
+    e_invalid_quantity EXCEPTION;
+    e_invalid_price EXCEPTION;
+    
+    PROCEDURE add_product(
+        p_name VARCHAR2, p_category VARCHAR2, p_price DECIMAL,
+        p_quantity INT, p_vendor_id INT
+    );
+    FUNCTION get_vendor_sales(p_vendor_id INT) RETURN DECIMAL;
+    PROCEDURE generate_sales_report;
+    FUNCTION check_inventory_status(p_product_id INT) RETURN VARCHAR2;
+    PROCEDURE get_vendor_performance(p_vendor_id IN NUMBER);
+END farmers_market_pkg;
+/
+
+CREATE OR REPLACE PACKAGE BODY farmers_market_pkg AS
+    -- [Previous package body implementation remains the same]
+END farmers_market_pkg;
+/

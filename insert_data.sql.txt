@@ -1,0 +1,27 @@
+INSERT ALL
+    INTO VENDORS VALUES (1, 'Green Valley Farms', '+250 123 456 789', 'S01')
+    INTO VENDORS VALUES (2, 'Sunnydale Orchards', '+250 987 654 321', 'S02')
+    INTO VENDORS VALUES (3, 'Organic Dairy Farm', '+250 567 890 123', 'S03')
+SELECT * FROM dual;
+
+INSERT INTO PRODUCTS (name, category, price, quantity, vendor_id) 
+VALUES ('Organic Carrots', 'Vegetables', 3.99, 50, 1);
+
+INSERT INTO PRODUCTS (name, category, price, quantity, vendor_id)
+VALUES ('Fresh Apples', 'Fruits', 2.50, 30, 2);
+
+INSERT ALL
+    INTO SALES (sale_id, product_id, vendor_id, quantity_sold, price, sale_date)
+        VALUES (1, (SELECT product_id FROM PRODUCTS WHERE name = 'Organic Carrots'), 1, 10, 39.90, SYSDATE)
+    INTO SALES (sale_id, product_id, vendor_id, quantity_sold, price, sale_date)
+        VALUES (2, (SELECT product_id FROM PRODUCTS WHERE name = 'Fresh Apples'), 2, 5, 12.50, SYSDATE)
+SELECT * FROM dual;
+
+INSERT ALL
+    INTO HOLIDAYS (holiday_date, description)
+        VALUES (TO_DATE('2024-03-25', 'YYYY-MM-DD'), 'Test Holiday')
+    INTO HOLIDAYS (holiday_date, description)
+        VALUES (TO_DATE('2024-03-26', 'YYYY-MM-DD'), 'Another Holiday')
+SELECT * FROM dual;
+
+COMMIT;
