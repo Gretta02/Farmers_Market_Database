@@ -20,14 +20,14 @@ and inventory tracking with built-in auditing and validation using PL/SQL.
 
 ## 📸 Screenshots
 Screenshots of relevant outputs are provided in the `screenshots` folder.
-![vendor performance report](https://github.com/user-attachments/assets/a5b710bc-347f-4db0-95f1-c1b792735ba4)
-![Trigger execution on Weekend](https://github.com/user-attachments/assets/67b2d821-0ed6-428f-bcbc-d76167665fcf)
-![Trigger execution on regular day](https://github.com/user-attachments/assets/5c298bbf-b31b-4ed0-8100-a653290e35f3)
-![Swimlane](https://github.com/user-attachments/assets/bb0efe93-06d2-4a84-957f-a0300939b938)
-![Sales_report output](https://github.com/user-attachments/assets/5b968517-a7cd-43a7-af67-12225ec178f8)
-![Sales_report for vendor](https://github.com/user-attachments/assets/e94266ee-ca04-44f4-9a6b-ac87e567abf7)
-![inventory status check](https://github.com/user-attachments/assets/cbfe353d-acb8-4a04-892d-299c9b67cc7c)
-![ER Diagram](https://github.com/user-attachments/assets/fa264266-80d7-4190-a5bd-fcd287e23ede)
+![vendor performance report](https://github.com/user-attachments/assets/9ebd0fdc-1fbc-482f-a608-50b186f1994a)
+![Trigger execution on Weekend](https://github.com/user-attachments/assets/6f27fab7-ef2a-4d16-971c-5aa29ed9dde2)
+![Trigger execution on regular day](https://github.com/user-attachments/assets/07dd5e48-2ad3-4c49-b4ac-ea5874cba17c)
+![Swimlane](https://github.com/user-attachments/assets/d73ea86d-7e15-4d93-ac1c-2084d8a5d14e)
+![Sales_report output](https://github.com/user-attachments/assets/868415cd-4e0c-439e-9656-c7acd95b872b)
+![Sales_report for vendor](https://github.com/user-attachments/assets/79a1c060-0be3-4e5a-8d52-8bcaff3a0d0f)
+![inventory status check](https://github.com/user-attachments/assets/3d2ec7d3-7570-458a-81a4-16da82fa7f18)
+![ER Diagram](https://github.com/user-attachments/assets/8ea7287a-6ad9-4389-b339-d52c29d389f3)
 
 
 
