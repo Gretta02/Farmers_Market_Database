@@ -32,6 +32,8 @@ Screenshots of relevant outputs are provided in the `screenshots` folder.
 
 
 ## Here's also a powerpoint that explains the project at large
+[PPT FOR all done in queries.pptx](https://github.com/user-attachments/files/20427901/PPT.FOR.all.done.in.queries.pptx)
+
 ## 📄 SQL Scripts
 Organized in the `sql/` folder.
 Sql files are also uploaded for farther information
